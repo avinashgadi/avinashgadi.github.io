@@ -4,6 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .nav ul li {
+            transition: color 0.3s, text-decoration 0.3s, transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+        .nav ul li:hover {
+            color: #ffd700;
+            text-decoration: underline;
+            transform: scale(1.1) translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .nav ul li::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #ffd700;
+            transition: width 0.3s;
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+        }
+        .nav ul li:hover::after {
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <header style="background-color:gray;border-radius: 6px; display: flex;justify-content: space-between;align-items: center;">
@@ -20,5 +47,18 @@
         </ul>
     </div>
     </header>
+<div>
+    <div style="display: flex; justify-content: center; align-items: center; gap: 40px; margin-top: 60px;">
+        <div style="flex: 1; max-width: 500px;">
+            <h2 style="color: #333;">Mern Stack Web Developer</h2>
+            <p style="font-size: 1.2em; color: #555;">
+                An aspiring Mern Stack Web Developer passionate about building modern, responsive, and user-friendly web applications.
+            </p>
+        </div>
+        <div style="flex: 1; display: flex; justify-content: center;">
+            <img src="your-image.jpg" alt="Mohan Sai Avinash" style="width: 250px; height: 250px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
+        </div>
+    </div>
+</div>
 </body>
 </html>
