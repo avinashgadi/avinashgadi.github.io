@@ -1,0 +1,14 @@
+mongo-replica folder
+3 sub folders
+data1
+data2
+data3
+mongod -replSet rs1 -logpath ""dbpath"" --port 27018
+mongod =start a new mongo db server on port 27018
+replSet name = rs1 
+-log path = "file path.log"
+db path = "file path"
+To shut down 
+go to server 
+use admin
+db.shutdownServer()
